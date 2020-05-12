@@ -1,0 +1,56 @@
+﻿
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Sign up for our newsletter.</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="firstName" type="text" class="form-control col-md-12" placeholder="First Name" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="lastName" type="text" class="form-control col-md-12" placeholder="Last Name" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="emailAddress" type="email" class="form-control col-md-12" placeholder="Email Address" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="dateOfBirth" type="date" class="form-control col-md-12" placeholder="Date of Birth" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="carYear" type="text" class="form-control col-md-12" placeholder="Car Year" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="carMake" type="text" class="form-control col-md-12" placeholder="Car Make" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="carModel" type="text" class="form-control col-md-12" placeholder="Car Model" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Have you ever had a DUI?</label>
+                    <br />
+                    <input type="radio" id="no" name="dUIHistory" value="no" checked />
+                    <label for="no">No</label>
+                    <input type="radio" id="yes" name="dUIHistory" value="yes" />
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="totalTickets" type="text" class="form-control col-md-12" placeholder="How many tickets have you had?" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Would you like full coverage?</label>
+                    <br />
+                    <input type="radio" id="no" name="fullCoverage" value="no" checked />
+                    <label for="no">No</label>
+                    <input type="radio" id="yes" name="fullCoverage" value="yes" />
+                    <label for="yes">Yes</label>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

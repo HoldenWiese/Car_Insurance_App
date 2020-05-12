@@ -1,0 +1,128 @@
+﻿@using CarInsuranceQuote.Models
+@model System.Data.Entity.DbSet<Customer>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-12 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customer Data</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col font-weight-bold">
+                    First Name
+                </div>
+                <div class="col font-weight-bold">
+                    Last Name
+                </div>
+                <div class="col font-weight-bold">
+                    Email Address
+                </div>
+                <div class="col font-weight-bold">
+                    Quote Estimate
+                </div>
+            </div>
+
+            @foreach (var customer in Model)
+            {
+                <div class="row">
+                    <div class="col">
+                        @customer.FirstName
+                    </div>
+                    <div class="col">
+                        @customer.LastName
+                    </div>
+                    <div class="col">
+                        @customer.EmailAddress
+                    </div>
+                    <div class="col">
+                        @customer.Quote
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-12 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customer Data</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col font-weight-bold">
+                    First Name
+                </div>
+                <div class="col font-weight-bold">
+                    Last Name
+                </div>
+                <div class="col font-weight-bold">
+                    Email Address
+                </div>
+                <div class="col font-weight-bold">
+                    Date of Birth
+                </div>
+                <div class="col font-weight-bold">
+                    Car Year
+                </div>
+                <div class="col font-weight-bold">
+                    Car Make
+                </div>
+                <div class="col font-weight-bold">
+                    Car Model
+                </div>
+                <div class="col font-weight-bold">
+                    DUI History
+                </div>
+                <div class="col font-weight-bold">
+                    Total Tickets
+                </div>
+                <div class="col font-weight-bold">
+                    Full Coverage
+                </div>
+                <div class="col font-weight-bold">
+                    Quote Estimate
+                </div>
+            </div>
+
+            @foreach (var customer in Model)
+            {
+                <div class="row">
+                    <div class="col">
+                        @customer.FirstName
+                    </div>
+                    <div class="col">
+                        @customer.LastName
+                    </div>
+                    <div class="col">
+                        @customer.EmailAddress
+                    </div>
+                    <div class="col">
+                        @customer.DateOfBirth
+                    </div>
+                    <div class="col">
+                        @customer.CarYear
+                    </div>
+                    <div class="col">
+                        @customer.CarMake
+                    </div>
+                    <div class="col">
+                        @customer.CarModel
+                    </div>
+                    <div class="col">
+                        @customer.DUIHistory
+                    </div>
+                    <div class="col">
+                        @customer.TotalTickets
+                    </div>
+                    <div class="col">
+                        @customer.FullCoverage
+                    </div>
+                    <div class="col">
+                        @customer.Quote
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
