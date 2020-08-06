@@ -49,7 +49,8 @@ namespace CarInsuranceQuote.Controllers
                 db.Customers.Add(customer);
                 db.SaveChanges();
             }
-            return View("Success");
+
+            return Redirect("Admin");
         }
 
         public ActionResult Admin()
@@ -72,7 +73,6 @@ namespace CarInsuranceQuote.Controllers
         {
             decimal totalEst = 50m;
 
-            //Getting age. Probably a better way to do this.
             DateTime zeroTime = new DateTime(1, 1, 1);
             DateTime a = dateOfBirthForm;
             DateTime b = DateTime.Today;
